@@ -1,0 +1,3 @@
+C:\Users\User\source\repos\ListStaffStruct\obj\Debug\ListStaffStruct.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ListStaffStruct\obj\Debug\ListStaffStruct.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\ListStaffStruct\obj\Debug\ListStaffStruct.csproj.CoreCompileInputs.cache
