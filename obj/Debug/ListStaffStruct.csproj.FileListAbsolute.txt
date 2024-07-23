@@ -1,3 +1,6 @@
 C:\Users\User\source\repos\ListStaffStruct\obj\Debug\ListStaffStruct.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\ListStaffStruct\obj\Debug\ListStaffStruct.csproj.SuggestedBindingRedirects.cache
 C:\Users\User\source\repos\ListStaffStruct\obj\Debug\ListStaffStruct.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ListStaffStruct1 github\obj\Debug\ListStaffStruct.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ListStaffStruct1 github\obj\Debug\ListStaffStruct.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\ListStaffStruct1 github\obj\Debug\ListStaffStruct.csproj.CoreCompileInputs.cache

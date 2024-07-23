@@ -8,13 +8,13 @@ namespace ListStaffStruct
 {
     class Repository
     {
-        public ListStaff[] GetAllWorkers()
+        public Worker[] GetAllWorkers()
         {
             // здесь происходит чтение из файла
             // и возврат массива считанных экземпляров
         }
 
-        public ListStaff GetWorkerById(int id)
+        public Worker GetWorkerById(int id)
         {
             // происходит чтение из файла, возвращается Worker
             // с запрашиваемым ID
@@ -27,13 +27,13 @@ namespace ListStaffStruct
             // кроме удаляемого
         }
 
-        public void AddWorker(ListStaff worker)
+        public void AddWorker(Worker worker)
         {
             // присваиваем worker уникальный ID,
             // дописываем нового worker в файл
         }
 
-        public ListStaff[] GetWorkersBetweenTwoDates(DateTime dateFrom, DateTime dateTo)
+        public Worker[] GetWorkersBetweenTwoDates(DateTime dateFrom, DateTime dateTo)
         {
             // здесь происходит чтение из файла
             // фильтрация нужных записей

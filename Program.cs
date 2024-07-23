@@ -14,10 +14,10 @@ namespace ListStaffStruct
             Console.WriteLine("Введите количество сотрудников :");
             int inputStaff = int.Parse(Console.ReadLine());
 
-            string[] StaffList = new string[inputStaff]; //массив, который будет сохранен в файл
+            string[] Worker = new string[inputStaff]; //массив, который будет сохранен в файл
 
             var date = new DateTime();
-            ListStaff[] list = new ListStaff[7];
+            Worker[] list = new Worker[7];
             // заполнить строки массива сотрудников
 
 
@@ -45,9 +45,9 @@ namespace ListStaffStruct
                 Console.WriteLine("Введите место рождения");
                 string inputPlaceBirth = Console.ReadLine();
 
-                StaffList[i] = i.ToString() + "#" + inputDtCreate + "#" + inputFIO + "#" + inputAge.ToString() + "#" + inputHeight.ToString() + inputDateBirth.ToString() + "#" + inputPlaceBirth;
+                Worker[i] = i.ToString() + "#" + inputDtCreate + "#" + inputFIO + "#" + inputAge.ToString() + "#" + inputHeight.ToString() + inputDateBirth.ToString() + "#" + inputPlaceBirth;
 
-                list[i] = new ListStaff()
+                list[i] = new Worker()
                 {
                     ID = i + 1,
                     DtCreate = inputDtCreate,

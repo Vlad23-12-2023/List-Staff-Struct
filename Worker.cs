@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ListStaffStruct
 {
-    public struct ListStaff
+    public struct Worker
     {
         /// <summary>
         /// Номер по ведомости
@@ -53,7 +53,7 @@ namespace ListStaffStruct
         /// <param name="Height"></param>
         /// <param name="DateBirth"></param>
         /// <param name="PlaceBirth"></param>
-        public ListStaff(int ID, string DtCreate, string FIO, int Age, int Height, int DateBirth, string PlaceBirth)
+        public Worker(int ID, string DtCreate, string FIO, int Age, int Height, int DateBirth, string PlaceBirth)
         {
             this.ID = ID;
             this.DtCreate = DtCreate;
@@ -64,7 +64,7 @@ namespace ListStaffStruct
             this.PlaceBirth = PlaceBirth;
         }
 
-        public ListStaff(int ID, string FIO) :
+        public Worker(int ID, string FIO) :
             this(ID, DtCreate, FIO, Age, Height, DateBirth, PlaceBirth)
         {
 
