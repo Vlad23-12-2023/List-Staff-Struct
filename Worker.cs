@@ -16,7 +16,7 @@ namespace ListStaffStruct
         /// <summary>
         /// Дата и время создания записи
         /// </summary>
-        public string DtCreate { get; set; }
+        public DateTime DtCreate { get; set; }
 
         /// <summary>
         /// ФИО
@@ -36,7 +36,7 @@ namespace ListStaffStruct
         /// <summary>
         /// Дата рождения
         /// </summary>
-        public int DateBirth { get; set; }
+        public DateTime DateBirth { get; set; }
 
         /// <summary>
         /// Место рождения
@@ -44,35 +44,45 @@ namespace ListStaffStruct
         public string PlaceBirth { get; set; }
 
         /// <summary>
-        /// Конструктор основной
+        /// 
         /// </summary>
-        /// <param name="ID"></param>
-        /// <param name="DtCreate"></param>
-        /// <param name="FIO"></param>
-        /// <param name="Age"></param>
-        /// <param name="Height"></param>
-        /// <param name="DateBirth"></param>
-        /// <param name="PlaceBirth"></param>
-        public Worker(int ID, string DtCreate, string FIO, int Age, int Height, int DateBirth, string PlaceBirth)
+        /// <param name="id"></param>
+        /// <param name="dtCreate"></param>
+        /// <param name="fio"></param>
+        /// <param name="age"></param>
+        /// <param name="height"></param>
+        /// <param name="dateBirth"></param>
+        /// <param name="placeBirth"></param>
+        
+        public Worker(int id, DateTime dtCreate, string fio, int age, int height, DateTime dateBirth, string placeBirth)
         {
-            this.ID = ID;
-            this.DtCreate = DtCreate;
-            this.FIO = FIO;
-            this.Age = Age;
-            this.Height = Height;
-            this.DateBirth = DateBirth;
-            this.PlaceBirth = PlaceBirth;
+            this.ID = id;
+            this.DtCreate = dtCreate;
+            this.FIO = fio;
+            this.Age = age;
+            this.Height = height;
+            this.DateBirth = dateBirth;
+            this.PlaceBirth = placeBirth;
         }
 
-        public Worker(int ID, string FIO) :
-            this(ID, DtCreate, FIO, Age, Height, DateBirth, PlaceBirth)
+        public Worker(int id) :
+            this(DtCreate, FIO, Age, Height, DateBirth, PlaceBirth)
         {
 
         }
 
-        public string StringList()
+        public Worker CreateWorker(int id, DateTime dtCreate, string fio, int age, int height, DateTime dateBirth, string placeBirth)
         {
-            return $"";
+            return new Worker()
+            {
+                id = id,
+                DtCreate = dtCreate,
+                FIO = fio,
+                Age = age,
+                Height = height,
+                DateBirth = dateBirth,
+                PlaceBirth = placeBirth
+            };
         }
     }
 }
