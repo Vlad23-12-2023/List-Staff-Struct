@@ -9,6 +9,11 @@ namespace ListStaffStruct
 {
     internal class Program
     {
+        public void PrintList()
+        {
+
+        }
+
         static void Main(string[] args)
         {
             //создать и заполнить файл, если файла нет
@@ -19,21 +24,21 @@ namespace ListStaffStruct
                 //
 
                 Console.WriteLine("Введите количество сотрудников :");
-                int inputStaff = int.Parse(Console.ReadLine());
+                int inputStaff = int.Parse(Console.ReadLine());         // переменная содержит количество сотрудников в первоначальном списке
 
-                //тело метода 
-                string[] Worker = new string[inputStaff]; //массив, который будет сохранен в файл
+                Worker[] worker = new Worker[inputStaff];               // создается массив структур
+
+                string[] workers = new string[inputStaff]; //массив, который будет сохранен в файл
 
                 var date = new DateTime();
                 //Worker[] list = new Worker[7];
 
                 //заполнить элементы от 0 до 6 для каждого сотрудника
-                for (int i = 0; i < list.Length; i++)
+                for (int i = 0; i < inputStaff; i++)
                 {
+                    int inputID = i+1;                          //присвоить номер по порядку
 
-                    //int inputID;                          //присвоить номер по порядку
-
-                    //string inputDtCreate = date.ToShortTimeString();                 //добавить текущее время создания
+                    DateTime inputDtCreate = date;                 //добавить текущее время создания
 
                     Console.WriteLine("Введите Ф И О");
                     string inputFIO = Console.ReadLine();
@@ -50,27 +55,17 @@ namespace ListStaffStruct
                     Console.WriteLine("Введите место рождения");
                     string inputPlaceBirth = Console.ReadLine();
 
-                    //Worker[i] = i.ToString() + "#" + inputDtCreate + "#" + inputFIO + "#" + inputAge.ToString() + "#" + inputHeight.ToString() + inputDateBirth.ToString() + "#" + inputPlaceBirth;
 
-                    //list[i] = new Worker()
-                    //{
-                    //    ID = i + 1,
-                    //    DtCreate = inputDtCreate,
-                    //    FIO = inputFIO,
-                    //    Age = inputAge,
-                    //    Height = inputHeight,
-                    //    DateBirth = inputDateBirth,
-                    //    PlaceBirth = inputPlaceBirth
-                    //};
+                    workers[i] = inputID.ToString() + "#" + inputDtCreate.ToString() + "#" + inputFIO + "#" + inputAge.ToString() + "#" + inputHeight.ToString() + inputDateBirth.ToString() + "#" + inputPlaceBirth;
 
-                    workers[i] = CreateWorker(
-                        workers[i].Id = i + 1,
-                        workers[i].DtCreate = date,
-                        workers[i].FIO = inputFIO,
-                        workers[i].Age = inputAge,
-                        workers[i].Height = inputHeight,
-                        workers[i].DateBirth = inputDateBirth,
-                        workers[i].PlaceBirth = inputPlaceBirth
+                    worker[i] = CreateWorker(
+                        worker[i].Id = inputID,
+                        worker[i].DtCreate = date,
+                        worker[i].FIO = inputFIO,
+                        worker[i].Age = inputAge,
+                        worker[i].Height = inputHeight,
+                        worker[i].DateBirth = inputDateBirth,
+                        worker[i].PlaceBirth = inputPlaceBirth
                     );
 
                 }
@@ -80,7 +75,7 @@ namespace ListStaffStruct
                 // записать массив в файл
                 //
 
-                File.WriteAllLines(@"C:\Proflist\Proflist.txt", lines);
+                File.WriteAllLines(@"C:\Proflist\Proflist.txt", workers);
             }
 
             Console.ReadKey();
